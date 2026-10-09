@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!---
+  NIM: 252520095
+  Nama: Singgih Raharjo
+  Kelas: TI A
+  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Singgih Raharjo</title>
+
+  <style>
+    :root {
+      --bg: #f6f7f4;
+      --panel: #ffffff;
+      --text: #1c2321;
+      --muted: #5b6763;
+      --line: #d8ddd9;
+      --accent: #0f766e;
+      --accent-text: #ffffff;
+      --row: #eef2ef;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.25s, color 0.25s;
+    }
+
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+    a { color: var(--accent); }
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    aside {
+      position: sticky;
+      top: 24px;
+      align-self: start;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    aside img {
+      width: 160px;
+      height: 240px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      margin-bottom: 12px;
+    }
+    aside h1 { font-size: 1.6rem; margin: 4px 0; }
+    aside p { margin: 4px 0; color: var(--muted); font-size: 0.95rem; }
+    nav ul { list-style: none; padding: 0; margin: 20px 0 0; text-align: left; }
+    nav li a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    nav li a:hover { background: var(--row); color: var(--accent); }
+
+    main section { margin-bottom: 40px; scroll-margin-top: 24px; }
+    main h2 {
+      font-size: 1.5rem;
+      margin: 0 0 12px;
+      padding-left: 12px;
+      border-left: 5px solid var(--accent);
+    }
+    main p { max-width: 65ch; }
+
+    .hobi { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+    .hobi li {
+      padding: 6px 16px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      color: var(--accent);
+    }
+
+    .tabel-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; background: var(--panel); }
+    caption { text-align: left; padding: 10px 14px; color: var(--muted); font-size: 0.9rem; }
+    th, td { padding: 10px 14px; text-align: left; border-top: 1px solid var(--line); }
+    th { background: var(--accent); color: var(--accent-text); border-top: none; }
+    tbody tr:nth-child(even) { background: var(--row); }
+    tbody tr:hover { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+    form {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      max-width: 520px;
+    }
+    form label { display: block; margin-top: 14px; font-weight: 600; }
+    form input[type="text"], form input[type="email"] {
+      width: 100%;
+      margin-top: 4px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 1rem;
+    }
+    fieldset { margin-top: 16px; border: 1px solid var(--line); border-radius: 8px; }
+    legend { font-weight: 600; padding: 0 6px; }
+    fieldset label { display: inline-block; margin: 4px 18px 4px 0; font-weight: normal; }
+    input[type="radio"] { accent-color: var(--accent); }
+
+    button[type="submit"] {
+      margin-top: 18px;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: var(--accent-text);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { opacity: 0.88; }
+    #hasil { margin: 12px 0 0; font-weight: 600; color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body { transition: none; }
+    }
+  </style>
+</head>
+<body>
+    <div class="layout">
+      
+     <aside>
+      <img src="img/foto-profil.jpg" width="200" height="200"
+       alt="Foto Singgih Raharjo">
+      <h1>Singgih Raharjo</h1>
+      <p>Mahasiswa Teknologi Informasi</p>
+      <p>Universitas Muhammadiyah Purworejo</p>
+
+        <nav aria-label="Navigasi Halaman">
+            <ul>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#hobi">Hobi</a></li>
+                <li><a href="#kampus">Website Kampus</a></li>
+                <li><a href="#matkul">Mata Kuliah</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+     </aside>
+
+     <main>
+        
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <p>
+          Halo, saya Singgih, mahasiswa program studi Teknologi Informasi di
+          Universitas Muhammadiyah Purworejo. Sambil kuliah, saya bekerja sebagai
+          petugas lapangan di Perum BULOG yang ikut menangani penyaluran bantuan
+          pangan.
+        </p>
+        <p>
+          Dari pekerjaan itu saya jadi tertarik dengan pengelolaan dan validasi
+          data, dan ingin belajar membuat aplikasi web yang bisa membantu kerja
+          di lapangan. Halaman ini adalah latihan HTML saya.
+        </p>
+        </section>
+
+        <section id="hobi">
+            <h2>Hobi</h2>
+            <ul>
+                <li>Berkegiatan Sosial</li>
+                <li>Menulis</li>
+                <li>Bermain game strategi (catur)</li>
+                <li>Berolahraga</li>
+            </ul>
+        </section>
+
+        <section id="kampus">
+            <h2>Website Kampus</h2>
+            <p>Kunjungi website resmi Universitas Muhammadiyah Purworejo untuk informasi lebih lanjut: <a href="https://umpwr.ac.id" target="_blank" rel="noopener noreferrer">website resmi Universitas Muhammadiyah Purworejo</a>
+            </p>
+        </section>
+
+        <section id="matkul">
+            <h2>Daftar Mata Kuliah</h2>
+            <div class="tabel-warp">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Mata Kuliah</th>
+                        <th>SKS</th>
+                        <th>Dosen Pengampu</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pemrograman Web</td>
+                        <td>3</td>
+                        <td>Hamid Muhammad Jumasa M.Eng.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Praktikum Struktur Data</td>
+                        <td>2</td>
+                        <td>Dewi Chirzah S.Kom., M.Cs.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sistem Operasi</td>
+                        <td>3</td>
+                        <td>Hanifatus Sa'diyah W. S.Kom, M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Etika Teknologi Informasi</td>
+                        <td>3</td>
+                        <td>Murhadi S.Pd.T., M.Eng.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Analisis dan Perancangan Sistem</td>
+                        <td>3</td>
+                        <td>Ike Yunia Pasa S.T., M. Kom.</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h2>Formulir Kontak</h2>
+             <form id="form-kontak" action="#" method="post">
+          <label for="nama">Nama
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+          </label>
+
+          <label for="email">Email
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+          </label>
+
+          <fieldset>
+            <legend>Jenis Kelamin</legend>
+            <label for="pria"><input type="radio" id="pria" name="jenis_kelamin" value="Laki-laki" required> Laki-laki</label>
+            <label for="wanita"><input type="radio" id="wanita" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
+          </fieldset>
+
+          <button type="submit">Kirim</button>
+          <p id="hasil" aria-live="polite"></p>
+        </form>
+        </section>
+    </maiin>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Singgih Raharjo</p>
+    </footer>
+
+</body>
+</html>
